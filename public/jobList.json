@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "logo": "/src/images/google.png",
+        "job_title":"Technical Database Engineer",
+        "company":"Google LLC",
+        "type":["Remote","Full Time"],
+        "location": "Dhaka, Bangladesh",
+        "salary": "100k - 150k"
+    },
+    {
+        "id": 2,
+        "logo": "/src/images/netflix.png",
+        "job_title":"Senior Product Manager",
+        "company":"Netflix Co.",
+        "type":["Onsite","Full Time"],
+        "location": "London, UK",
+        "salary": "110k - 140k"
+    },
+    {
+        "id": 3,
+        "logo": "/src/images/google.png",
+        "job_title":"Junior Frontend Developer",
+        "company":"Google LLC",
+        "type":["Remote","Part Time"],
+        "location": "NY, USA",
+        "salary": "60k - 100k"
+    },
+    {
+        "id": 4,
+        "logo": "/src/images/tesla.png",
+        "job_title":"Marketing Manager",
+        "company":"Tesla",
+        "type":["Onsite","Full Time"],
+        "location": "Dubai, UAE",
+        "salary": "200k - 250k"
+    },
+    {
+        "id": 5,
+        "logo": "/src/images/tesla.png",
+        "job_title":"Mechanical Automobile Engineer",
+        "company":"Tesla",
+        "type":["Onsite","Full Time"],
+        "location": "Beijing, China",
+        "salary": "110k - 150k"
+    },
+    {
+        "id": 6,
+        "logo": "/src/images/google.png",
+        "job_title":"Software Engineer",
+        "company":"Google LLC",
+        "type":["Remote","Full Time"],
+        "location": "Washington DC, USA",
+        "salary": "200k - 300k"
+    },
+    {
+        "id": 7,
+        "logo": "/src/images/airbnb.png",
+        "job_title":"Senior MERN Stack Developer",
+        "company":"Airbnb",
+        "type":["Remote","Full Time"],
+        "location": "Liverpool, UK",
+        "salary": "120k - 150k"
+    },
+    {
+        "id": 8,
+        "logo": "/src/images/tesla.png",
+        "job_title":"Receptionist",
+        "company":"Tesla",
+        "type":["Onsite","Full Time"],
+        "location": "Paris, France",
+        "salary": "100k - 150k"
+    },
+    {
+        "id": 9,
+        "logo": "/src/images/google.png",
+        "job_title":"Junior MARN Stact Developer (Intern)",
+        "company":"Google LLC",
+        "type":["Remote","Full Time"],
+        "location": "Dhaka, Bangladesh",
+        "salary": "100k - 150k"
+    },
+    {
+        "id": 10,
+        "logo": "path",
+        "job_title":"Finance Manager",
+        "company":"Airbnb",
+        "type":["Onsite","Full Time"],
+        "location": "Dhaka, Bangladesh",
+        "salary": "100k - 150k"
+    }
+]
