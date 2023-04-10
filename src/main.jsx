@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import { Router, RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './components/Home'
 import Statistics from './components/Statistics'
 import Blog from './components/Blog'
 import AppliedJobs from './components/AppliedJobs'
 import ErrorPage from './components/ErrorPage'
 import Details from './components/Details'
+import Home from './components/Home/Home'
 const router = createBrowserRouter([
   {
     path: '/',

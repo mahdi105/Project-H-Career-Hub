@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <header className="container px-10 py-12 mx-auto flex items-center justify-between">
+        <header className="container px-10 py-12 mx-auto flex items-center justify-between bg-[#f9f9ff]">
             <Link to='/'><h1 className='font-extrabold text-[32px]'>Kormo</h1></Link>
             <nav className='flex items-center justify-center gap-11 font-semibold'>
                 <NavLink to="/" className={({isActive}) => isActive ? "active" : ""}>
