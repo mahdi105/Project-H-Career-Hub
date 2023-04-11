@@ -51,7 +51,9 @@ const Home = () => {
             <section>
                 <SectionHeading title={'Featured Jobs'} desc={'Explore thousands of job opportunities with all the information you need. Its your future'}></SectionHeading>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
-                   
+                    {
+                        jobs.map(job => <JobCard key={job.id} job={job}></JobCard>)
+                    }
                 </div>
                 <div>
                     <button>See All Jobs</button>
