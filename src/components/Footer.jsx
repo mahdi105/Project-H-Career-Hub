@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className='px-10 bg-[#1A1919] pt-[90px] divide-y divide-slate-700 container mx-auto '>
+        <footer className='lg:px-10 bg-[#1A1919] pt-[90px] divide-y divide-slate-700 container mx-auto '>
             <section className='pb-10 grid grid-cols-1 md:grid-cols-5 gap-12'>
                 <div>
                     <h3 className='font-extrabold text-3xl text-white mb-2'>Kormo</h3>
