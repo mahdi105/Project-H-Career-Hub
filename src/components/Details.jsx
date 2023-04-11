@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { addToDb } from '../utils/fakedb';
 import { toast } from 'react-hot-toast';
 import PageTitle from './PageTitle';
+import { JobContext } from '../App';
 
 export const notify = () => toast.error('Already Applied');
 export const appliedMessage = () => toast.success('Application is successful');
 
 const Details = () => {
-    const loadedJobs = useLoaderData();
+    const loadedJobs = useContext(JobContext);
     const [details, setDetails] = useState({});
     const { id } = useParams();//it will return us the dynamic part of the Route of Details Component as like {params} while using "loader" in the declaration of the the route.
     const { salary, job_title, phone, email, address, work_spec, desc, experience, requirements } = details;

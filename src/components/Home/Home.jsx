@@ -31,7 +31,7 @@ const Home = () => {
     return (
         <main className='container mx-auto lg:px-10 '>
             {/*================ Hero Section ================ */}
-            <section id='hero' className="bg-[#f9f9ff] mb-[90px] min-h-[74%] bg-[url('hardy.png')] bg-no-repeat bg-[length:650px_570px] bg-[90%_100%] pb-28 pt-12">
+            <section id='hero' className="bg-[#f9f9ff] mb-[90px] min-h-[74%] bg-[url('/hardy.png')] bg-no-repeat bg-[length:650px_570px] bg-[90%_100%] pb-28 pt-12">
                 <div className='w-6/12'>
                     <h1 className='font-bold text-[70px] font-sans leading-[75px] mb-6'><span className='font-extrabold text-[#7E90FE]'>Dream Job</span> Is Knocking At The Door</h1>
                     <p className='text-[#757575] font-medium text-[18px] mb-6 w-10/12'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
