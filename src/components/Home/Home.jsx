@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Home.css'
 import JobCategories from '../JobCategory/JobCategories';
 import SectionHeading from '../SectionHeading/SectionHeading';
-import { useLoaderData } from 'react-router-dom';
 import JobCard from '../JobCard/JobCard';
+import { JobContext } from '../../App';
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
     const [jobs, setJobs] = useState([]);
-    const loadedJobs = useLoaderData();
+    const loadedJobs = useContext(JobContext);
     useEffect(()=>{
        const newJobs = loadedJobs.slice(0,4); 
        setJobs(newJobs);
-    },[]);
+    },[loadedJobs]);
     useEffect(() => {
         const fetchData = async () => {
             try {

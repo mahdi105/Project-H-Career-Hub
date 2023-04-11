@@ -14,11 +14,12 @@ const router = createBrowserRouter([
     path: '/',
     element: <App></App>,
     errorElement: <ErrorPage></ErrorPage>,
+    loader: async ()=> fetch('/jobList.json'),
     children: [
       {
         path: '/',
         element: <Home></Home>,
-        loader: async ()=> fetch('/jobList.json')
+        // loader: async ()=> fetch('/jobList.json')
       },
       {
         path: '/statistics',
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <Details></Details>,
-        loader: async ({params}) => fetch('/jobList.json')
+        // loader: async ({params}) => fetch('/jobList.json')
       }
     ]
   }

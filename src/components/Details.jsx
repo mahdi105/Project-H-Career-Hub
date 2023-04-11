@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { addToDb } from '../utils/fakedb';
 import { toast } from 'react-hot-toast';
+import PageTitle from './PageTitle';
 
 export const notify = () => toast.error('Already Applied');
 export const appliedMessage = () => toast.success('Application is successful');
@@ -21,7 +22,7 @@ const Details = () => {
 
     return (
         <main>
-            <h1 className="mb-20 bg-[#f9f9ff] h-[200px] text-center leading-[200px] font-extrabold text-4xl bg-[url('/src/images/vector.png')] bg-no-repeat bg-[length:220px_150px] bg-[-1%_100%]">Job Details</h1>
+            <PageTitle>Job Details</PageTitle>
             <section className='container mx-auto lg:px-10 grid grid-cols-1 md:grid-cols-5 gap-4 mb-20'>
                 <div className='col-span-3'>
                     <div>
