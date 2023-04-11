@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const JobCard = ({job, handleJobDetails}) => {
-    const {logo,job_title,company,type,location,salary} = job;
+const JobCard = ({job}) => {
+    const {logo,job_title,company,type,location,salary,id} = job;
+    const navigate = useNavigate();
     return (
         <div className='p-10 rounded-md border border-[#E8E8E8]'>
             <div className='mb-8'>
@@ -19,7 +21,7 @@ const JobCard = ({job, handleJobDetails}) => {
                 <p className='flex gap-1 items-center text-[#757575] font-semibold text-lg'><img src="/src/images/icons/dollar.png" alt="" /><span>Salary: {salary}</span></p>
             </div>
             <div>
-                <button className='py-3 px-5 rounded bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-gradient-to-r hover:from-[#3c56fd] hover:to-[#6232e7] text-white' onClick={()=>handleJobDetails(job)}>
+                <button onClick={()=>navigate(`/details/${id}`)} className='py-3 px-5 rounded bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-gradient-to-r hover:from-[#3c56fd] hover:to-[#6232e7] text-white'>
                     View Details
                 </button>
             </div>
