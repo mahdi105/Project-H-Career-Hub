@@ -17,7 +17,7 @@ const JobCard = ({job}) => {
                 }
             </ul>
             <div className='flex items-center gap-3 mb-6'>
-                <p className='flex gap-1 items-center text-[#757575] text-[#757575] font-semibold text-lg'><img src="/src/images/icons/location.png" alt="" />{location}</p>
+                <p className='flex gap-1 items-center text-[#757575] font-semibold text-lg'><img src="/src/images/icons/location.png" alt="" />{location}</p>
                 <p className='flex gap-1 items-center text-[#757575] font-semibold text-lg'><img src="/src/images/icons/dollar.png" alt="" /><span>Salary: {salary}</span></p>
             </div>
             <div>

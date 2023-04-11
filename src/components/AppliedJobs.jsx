@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import PageTitle from './PageTitle';
 import { JobContext } from '../App';
 import { getStoredJobs } from '../utils/fakedb';
+import AppliedJob from './AppliedJob';
 
 const AppliedJobs = () => {
     const [applieds, setApplieds] = useState([]);
@@ -17,16 +18,33 @@ const AppliedJobs = () => {
         }
         setApplieds(newApplieds);
     },[loadedJobs]);
-    console.log(applieds);
+    const handleRemoteFilter = () => {
+        const savedJobs = [...applieds];
+        const remoteJobs = savedJobs.map(item => {
+            const type = item.type;
+            const exist = type.find(item => item === 'Remote');
+            if(exist){
+                return item;
+            }
+        });
+        const finalRemoteJobs = remoteJobs.filter(item => item !== undefined);
+        setApplieds(finalRemoteJobs);
+    }
+    handleRemoteFilter
     return (
         <main>
             <PageTitle>Applied Jobs</PageTitle>
-            <section>
-                <div>
-
+            <section className='container mx-auto lg:px-10 mb-20'>
+                
+                <div className='flex justify-end items-center gap-4 mb-10'>
+                    <p className='font-extrabold text-xl'>Filter By: </p>
+                    <button onClick={handleRemoteFilter} className='py-3 px-4 rounded-md font-extrabold text-[#7E90FE] border border-[#7E90FE] hover:bg-[#7E90FE] hover:text-white'>Remote</button>
+                    <button className='py-3 px-4 rounded-md font-extrabold text-[#7E90FE] border border-[#7E90FE] hover:bg-[#7E90FE] hover:text-white'>Onsite</button>
                 </div>
                 <div className='grid grid-cols-1 gap-6'>
-
+                    {
+                       applieds.map(job => <AppliedJob key={job.id} job={job}></AppliedJob>) 
+                    }
                 </div>
             </section>
         </main>
