@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToDb } from '../utils/fakedb';
+import { toast } from 'react-hot-toast';
+
+export const notify = () => toast.error('Already Applied');
+export const appliedMessage = () => toast.success('Application is successful');
 
 const Details = () => {
     const loadedJobs = useLoaderData();
     const [details, setDetails] = useState({});
     const { id } = useParams();//it will return us the dynamic part of the Route of Details Component as like {params} while using "loader" in the declaration of the the route.
+    const { salary, job_title, phone, email, address, work_spec, desc, experience, requirements } = details;
+    const handleAddToDb = (id) => {
+        addToDb(id);
+    }
     useEffect(() => {
         const newDetails = loadedJobs.find(job => job.id == id);
         setDetails(newDetails);
     }, [loadedJobs]);
-    const { salary, job_title, phone, email, address, work_spec, desc, experience, requirements } = details;
+
     return (
         <main>
             <h1 className="mb-20 bg-[#f9f9ff] h-[200px] text-center leading-[200px] font-extrabold text-4xl bg-[url('/src/images/vector.png')] bg-no-repeat bg-[length:220px_150px] bg-[-1%_100%]">Job Details</h1>
@@ -42,14 +51,16 @@ const Details = () => {
                         <div className='divide-y divide-slate-500 mb-8'>
                             <h3 className='font-extrabold text-[20px] mb-3'>Contact Info</h3>
                             <div className='pt-3'>
-                                <p className='mb-2 items-start flex gap-1 text-[#757575] font-medium text-lg'><img src="/src/images/icons/phone.png" alt="" /><span>Phone: {salary}</span></p>
-                                <p className='mb-2 items-start flex gap-1 text-[#757575] font-medium text-lg'><img src="/src/images/icons/email.png" alt="" /><span>Email: {job_title}</span></p>
-                                <p className='mb-2 flex gap-1 items-start text-[#757575] font-medium text-lg'><img src="/src/images/icons/location.png" alt="" /><span>Address: {job_title}</span></p>
+                                <p className='mb-2 items-start flex gap-1 text-[#757575] font-medium text-lg'><img src="/src/images/icons/phone.png" alt="" /><span>Phone: {phone}</span></p>
+                                <p className='mb-2 items-start flex gap-1 text-[#757575] font-medium text-lg'><img src="/src/images/icons/email.png" alt="" /><span>Email: {email}</span></p>
+                                <p className='mb-2 flex gap-1 items-start text-[#757575] font-medium text-lg'><img src="/src/images/icons/location.png" alt="" /><span>Address: {address}</span></p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <button className='rounded-md py-5 text-white w-full bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-gradient-to-r hover:from-[#3c56fd] hover:to-[#6232e7]'>Apply Now</button>
+                        <button onClick={()=>handleAddToDb(details.id)} className='rounded-md py-5 text-white w-full bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-gradient-to-r hover:from-[#3c56fd] hover:to-[#6232e7]'>
+                            Apply Now
+                        </button>
                     </div>
                 </div>
             </section>
