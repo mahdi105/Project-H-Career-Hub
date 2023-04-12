@@ -32,7 +32,7 @@ const Home = () => {
         <main>
             {/*================ Hero Section ================ */}
             <div className='bg-[#f9f9ff]'>
-                <section id='hero' className="container mx-auto px-4 lg:px-10 mb-[40px] md:mb-[90px] min-h-[74%] md:bg-[url('/hardy.png')] md:bg-no-repeat md:bg-[length:650px_570px] md:bg-[90%_100%] pb-16 md:pb-28 pt-12">
+                <section id='hero' className="container mx-auto px-4 lg:px-10 mb-[40px] md:mb-[90px] min-h-[74%] bg-[url('/hardy.png')] bg-no-repeat bg-[length:350px_350px] md:bg-[length:650px_570px] bg-[50%_100%] md:bg-[90%_100%] pb-[380px] md:pb-28 pt-12">
                     <div className='md:w-6/12'>
                         <h1 className='font-extrabold md:font-bold text-[40px] md:text-[70px] font-sans leading-[46px] md:leading-[75px] mb-6'><span className='font-extrabold text-[#7E90FE]'>Dream Job</span> Is Knocking At The Door</h1>
                         <p className='text-[#757575] font-medium text-[18px] mb-6 w-10/12'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
@@ -56,7 +56,7 @@ const Home = () => {
 
             {/* ============== Featured Jobs Section ================ */}
             <div className='container mx-auto lg:px-10 '>
-                <section className='mb-40 px-4 md:p-0'>
+                <section className='mb-20 md:mb-40 px-4 md:p-0'>
                     <SectionHeading title={'Featured Jobs'} desc={'Explore thousands of job opportunities with all the information you need. Its your future'}></SectionHeading>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-10'>
                         {
