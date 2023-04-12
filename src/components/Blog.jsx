@@ -4,7 +4,7 @@ import PageTitle from './PageTitle';
 const Blog = () => {
     return (
         <main>
-            <PageTitle>General Knowledge</PageTitle>
+            <PageTitle>General Knowledges</PageTitle>
             <section className='container mx-auto px-4 lg:px-10 mb-[80px]'>
                 <h2 className='text-2xl font-bold mb-5'>Answer to the questions below</h2>
                 <ol className='list-decimal ml-5 mb-4'>
