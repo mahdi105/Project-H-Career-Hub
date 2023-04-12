@@ -2,12 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className='lg:px-10 bg-[#1A1919] pt-[90px] divide-y divide-slate-700 container mx-auto '>
+        <footer className='px-4 lg:px-10 bg-[#1A1919] pt-[90px] divide-y divide-slate-700 container mx-auto '>
             <section className='pb-10 grid grid-cols-1 md:grid-cols-5 gap-12'>
                 <div>
                     <h3 className='font-extrabold text-3xl text-white mb-2'>Kormo</h3>
                     <p className='text-[#FFFFFFB2] text-sm mb-2'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
-                    <img src="/src/images/icons/media-icons.png" className='w-6/12' alt="" />
+                    <img src="/src/images/icons/media-icons.png" className='md:w-6/12' alt="" />
                 </div>
                 <div>
                     <h3 className='font-semibold text-[20px] text-white mb-2'>Company</h3>
