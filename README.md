@@ -1,5 +1,5 @@
 ## Live Link
-* Hosted In Netlify -> [Live Site](https://github.com/shakilahmedatik/heroGadget-complete)
+* Hosted In Netlify -> [Live Site](https://symphonious-pothos-a109c4.netlify.app/)
 
 ## Third Party Assets
 * [Error icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/error)
